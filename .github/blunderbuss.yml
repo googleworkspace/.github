@@ -13,8 +13,6 @@
 # limitations under the License.
 
 assign_issues:
-  - sqrrrl
-  - jpoehnelt
+  - googleworkspace/workspace-devrel-dre
 assign_prs:
-  - sqrrrl
-  - jpoehnelt
+  - googleworkspace/workspace-devrel-dre
