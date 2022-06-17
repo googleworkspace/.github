@@ -13,6 +13,6 @@
 # limitations under the License.
 
 assign_issues:
-  - googleworkspace/workspace-devrel-dre
+  - googleworkspace/workspace-devrel-dpe
 assign_prs:
-  - googleworkspace/workspace-devrel-dre
+  - googleworkspace/workspace-devrel-dpe
