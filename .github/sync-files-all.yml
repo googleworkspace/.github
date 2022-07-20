@@ -1,0 +1,38 @@
+# Copyright 2022 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+group:
+  - files:
+      # template files that can be modified in the repo
+      - source: sync-files/defaults/.github/workflows/lint.yml
+        dest: .github/workflows/lint.yml
+        replace: false
+      - source: sync-files/defaults/.github/workflows/test.yml
+        dest: .github/workflows/test.yml
+        replace: false
+      - source: sync-files/defaults/.github/CODEOWNERS
+        dest: .github/CODEOWNERS
+        replace: false
+      - source: sync-files/defaults/.github/sync-repo-settings.yaml
+        dest: .github/sync-repo-settings.yaml
+        replace: false
+      # automation workflow applied to every repository that should not change
+      - source: sync-files/defaults/.github/workflows/automation.yml
+        dest: .github/workflows/automation.yml
+        replace: true
+      - source: SECURITY.md
+        dest: SECURITY.md
+        replace: true
+    # repos will be appended below using gh cli
+    repos: |
