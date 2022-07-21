@@ -25,4 +25,4 @@ jobs:
       - name: approve
         run: gh pr review --approve "$PR_URL"
       - name: merge
-        run: gh pr merge --auto --squash --delete-branch "$PR_URL
+        run: gh pr merge --auto --squash --delete-branch "$PR_URL"
