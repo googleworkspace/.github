@@ -51,7 +51,6 @@ jobs:
           OVERWRITE_EXISTING_PR: true
           CONFIG_PATH: .github/${{ matrix.config }}.yml
           BRANCH_PREFIX: ${{ matrix.config }}
-          ORIGINAL_MESSAGE: true
-          COMMIT_AS_PR_TITLE: true
+          COMMIT_PREFIX: "chore: "
           PR_LABELS: |
             sync-files
