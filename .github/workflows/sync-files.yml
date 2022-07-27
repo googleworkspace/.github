@@ -41,7 +41,7 @@ jobs:
           >> .github/sync-files-all.yml
           cat .github/sync-files-all.yml
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GOOGLEWORKSPACE_BOT_TOKEN }}
       - name: ${{ matrix.config }}.yml
         uses: BetaHuhn/repo-file-sync-action@d61fc2b98c0b48c5ee77d9b575b191fe8e59cba3 # v1.17.19 June 2022
         with:
