@@ -26,7 +26,7 @@ group:
         replace: false
       - source: sync-files/defaults/.github/sync-repo-settings.yaml
         dest: .github/sync-repo-settings.yaml
-        replace: false
+        replace: true
       # automation workflow applied to every repository that should not change
       - source: sync-files/defaults/.github/workflows/automation.yml
         dest: .github/workflows/automation.yml
