@@ -13,7 +13,13 @@
 # limitations under the License.
 ---
 name: Workflows
-on: [workflow_dispatch, push]
+on: 
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 12 * * MON'
 jobs:
   status-badges:
     runs-on: ubuntu-latest
