@@ -24,24 +24,27 @@ FILE=README.md
 ORG=https://github.com/googleworkspace
 
 # delete all lines starting after matching string
-sed -n '/WORKFLOWS_INSERT_AFTER/q;p' <$FILE >$FILE.tmp
+sed -n '/WORKFLOWS_INSERT/q;p' <$FILE >$FILE.tmp
 mv $FILE.tmp $FILE
 
-echo "<!-- WORKFLOWS_INSERT -->" >>$FILE
 echo "Writing to $FILE"
-
-echo "## Workflows" >>$FILE
-echo "" >>$FILE
-
-echo "| Repository | Test | Lint | Release |" >>$FILE
-echo "| --- | --- | --- | --- |" >>$FILE
+{
+    echo ""
+    echo "<!-- WORKFLOWS_INSERT -->"
+    echo "<!-- textlint-disable -->"
+    echo "## Workflows"
+    echo ""
+    echo "| Repository | Test | Lint | Release |"
+    echo "| --- | --- | --- | --- |"
+}  >>$FILE
 
 badge() {
     local repo=$1
     local workflow=$2
-    echo "[![](${ORG}/${repo}/actions/workflows/${workflow}.yml/badge.svg?branch=main)](${ORG}/${repo}/actions/workflows/${workflow}.yml)"
+    echo "[![${repo} ${workflow}](${ORG}/${repo}/actions/workflows/${workflow}.yml/badge.svg?branch=main)](${ORG}/${repo}/actions/workflows/${workflow}.yml)"
 }
 
 for repo in $repos; do
-    echo "| [${repo}](${ORG}/${repo}) | $(badge ${repo} test) | $(badge ${repo} lint) | $(badge ${repo} release-please) |" >>$FILE
+    echo "| [${repo}](${ORG}/${repo}) | $(badge "${repo}" test) | $(badge "${repo}" lint) | $(badge "${repo}" release-please) |" >>$FILE
 done
+echo "<!-- textlint-enable -->" >>$FILE
