@@ -29,5 +29,7 @@ jobs:
       - run: |
           git checkout -b chore/workflows
           git add README.md
+          git config user.email "googleworkspace-bot@google.com"
+          git config user.name "googleworkspace-bot"
           git commit -am 'chore: update workflow status'
           gh pr create --fill --head main --base chore/workflows
