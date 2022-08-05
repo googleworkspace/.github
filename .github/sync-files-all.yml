@@ -37,6 +37,6 @@ group:
       # Superlinter configurations
       - source: sync-files/defaults/.github/linters/
         dest: .github/linters/
-        replace: false
+        replace: true
     # repos will be appended below using gh cli
     repos: |
