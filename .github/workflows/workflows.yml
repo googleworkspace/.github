@@ -15,7 +15,7 @@
 name: Workflows
 on: [ workflow_dispatch, push]
 jobs:
-  dependabot:
+  status-badges:
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{secrets.GOOGLEWORKSPACE_BOT_TOKEN}}
