@@ -32,4 +32,5 @@ jobs:
           git config user.email "googleworkspace-bot@google.com"
           git config user.name "googleworkspace-bot"
           git commit -am 'chore: update workflow status'
+          git push -u origin chore/workflows
           gh pr create --fill --head main --base chore/workflows
