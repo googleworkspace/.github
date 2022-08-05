@@ -34,5 +34,9 @@ group:
       - source: SECURITY.md
         dest: SECURITY.md
         replace: true
+      # Superlinter configurations
+      - source: sync-files/defaults/.github/linters/
+        dest: .github/linters/
+        replace: false
     # repos will be appended below using gh cli
     repos: |
