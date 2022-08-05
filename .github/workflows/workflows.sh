@@ -27,7 +27,7 @@ ORG=https://github.com/googleworkspace
 sed -n '/WORKFLOWS_INSERT_AFTER/q;p' <$FILE >$FILE.tmp
 mv $FILE.tmp $FILE
 
-echo "<!-- WORKFLOWS_INSERT -->" >>$FILE
+echo "<!-- WORKFLOWS_INSERT_AFTER -->" >>$FILE
 echo "Writing to $FILE"
 
 echo "## Workflows" >>$FILE

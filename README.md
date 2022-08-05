@@ -1,5 +1,5 @@
 A repository holding defaults for the [Google Workspace](https://github.com/googleworkspace) organization.
-<!-- WORKFLOWS_INSERT -->
+<!-- WORKFLOWS_INSERT_AFTER -->
 ## Workflows
 
 | Repository | Test | Lint | Release |
