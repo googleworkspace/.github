@@ -28,6 +28,6 @@ jobs:
       - run: .github/workflows/workflows.sh
       - run: |
           git checkout -b chore/workflows
-          git add WORKFLOWS.md
+          git add README.md
           git commit -am 'chore: update workflow status'
           gh pr create --fill --head main --base chore/workflows
