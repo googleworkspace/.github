@@ -24,13 +24,13 @@ FILE=README.md
 ORG=https://github.com/googleworkspace
 
 # delete all lines starting after matching string
-sed -n '/WORKFLOWS_INSERT/q;p' <$FILE >$FILE.tmp
+sed -n '/WORKFLOWS_INSERT_AFTER/q;p' <$FILE >$FILE.tmp
 mv $FILE.tmp $FILE
 
 echo "Writing to $FILE"
 {
     echo ""
-    echo "<!-- WORKFLOWS_INSERT -->"
+    echo "<!-- WORKFLOWS_INSERT_AFTER -->"
     echo "<!-- textlint-disable -->"
     echo "## Workflows"
     echo ""

@@ -1,7 +1,7 @@
 # Org defaults
 
 A repository holding defaults for the [Google Workspace](https://github.com/googleworkspace) organization.
-<!-- WORKFLOWS_INSERT -->
+<!-- WORKFLOWS_INSERT_AFTER -->
 <!-- textlint-disable -->
 ## Workflows
 
