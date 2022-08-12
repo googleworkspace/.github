@@ -29,7 +29,6 @@ mv $FILE.tmp $FILE
 
 echo "Writing to $FILE"
 {
-    echo ""
     echo "<!-- WORKFLOWS_INSERT_AFTER -->"
     echo "<!-- textlint-disable -->"
     echo "## Workflows"
