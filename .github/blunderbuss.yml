@@ -16,3 +16,8 @@ assign_issues:
   - googleworkspace/workspace-devrel-dpe
 assign_prs:
   - googleworkspace/workspace-devrel-dpe
+ignore_authors:
+  - davidharcombe
+  - jpoehnelt
+  - sqrrrl
+  - vinay-google
