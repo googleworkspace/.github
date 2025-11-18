@@ -37,6 +37,7 @@ jobs:
             --source \
             --json name --jq '.[] .name' \
             -L 1000 \
+          | grep -v "^meet$" \
           | sed -e 's/^/      googleworkspace\//' \
           >> .github/sync-files-all.yml
           cat .github/sync-files-all.yml
