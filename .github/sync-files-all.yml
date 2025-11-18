@@ -15,17 +15,14 @@
 group:
   - files:
       # template files that can be modified in the repo
-      - source: sync-files/defaults/.github/workflows/lint.yml
-        dest: .github/workflows/lint.yml
-        replace: false
-      - source: sync-files/defaults/.github/workflows/test.yml
-        dest: .github/workflows/test.yml
-        replace: false
       - source: sync-files/defaults/.github/CODEOWNERS
         dest: .github/CODEOWNERS
         replace: false
       - source: SECURITY.md
         dest: SECURITY.md
         replace: true
+      - source: sync-files/defaults/.gemini/
+        dest: .gemini/
+        replace: false
     # repos will be appended below using gh cli
     repos: |
