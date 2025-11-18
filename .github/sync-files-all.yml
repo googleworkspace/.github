@@ -24,5 +24,8 @@ group:
       - source: sync-files/defaults/.gemini/
         dest: .gemini/
         replace: false
+      - source: sync-files/defaults/.vscode/extensions.json
+        dest: .vscode/extensions.json
+        replace: false
     # repos will be appended below using gh cli
     repos: |
