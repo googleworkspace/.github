@@ -24,19 +24,8 @@ group:
       - source: sync-files/defaults/.github/CODEOWNERS
         dest: .github/CODEOWNERS
         replace: false
-      - source: sync-files/defaults/.github/sync-repo-settings.yaml
-        dest: .github/sync-repo-settings.yaml
-        replace: true
-      # automation workflow applied to every repository that should not change
-      - source: sync-files/defaults/.github/workflows/automation.yml
-        dest: .github/workflows/automation.yml
-        replace: true
       - source: SECURITY.md
         dest: SECURITY.md
-        replace: true
-      # Superlinter configurations
-      - source: sync-files/defaults/.github/linters/
-        dest: .github/linters/
         replace: true
     # repos will be appended below using gh cli
     repos: |
